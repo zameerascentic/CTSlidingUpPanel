@@ -136,6 +136,10 @@ public class CTBottomSlideController : NSObject, UIGestureRecognizerDelegate
         
     }
     
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
     public func viewWillTransition(to size:CGSize, with coordinator: UIViewControllerTransitionCoordinator){
         //Start Animation to new Size
         reinitBottomController(with: size)
